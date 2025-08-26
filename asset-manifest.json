@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/Sarvesh-Portfolio/static/css/main.a68346f4.css",
-    "main.js": "/Sarvesh-Portfolio/static/js/main.43990abb.js",
+    "main.css": "/Sarvesh-Portfolio/static/css/main.df448762.css",
+    "main.js": "/Sarvesh-Portfolio/static/js/main.1feec352.js",
+    "static/media/IMG_0113.jpeg": "/Sarvesh-Portfolio/static/media/IMG_0113.2741cd65a9098779a7d5.jpeg",
+    "static/media/parkpoint.png": "/Sarvesh-Portfolio/static/media/parkpoint.d046af5ae214d7b09f19.png",
+    "static/media/obscura.png": "/Sarvesh-Portfolio/static/media/obscura.31425aa9ce907e75cb7e.png",
+    "static/media/photography.png": "/Sarvesh-Portfolio/static/media/photography.e01a5d0c2e8c5c121140.png",
+    "static/media/inspirit-ai-certificate.jpg": "/Sarvesh-Portfolio/static/media/inspirit-ai-certificate.d0af7fcffe1b29d31f64.jpg",
     "index.html": "/Sarvesh-Portfolio/index.html",
-    "main.a68346f4.css.map": "/Sarvesh-Portfolio/static/css/main.a68346f4.css.map",
-    "main.43990abb.js.map": "/Sarvesh-Portfolio/static/js/main.43990abb.js.map"
+    "main.df448762.css.map": "/Sarvesh-Portfolio/static/css/main.df448762.css.map",
+    "main.1feec352.js.map": "/Sarvesh-Portfolio/static/js/main.1feec352.js.map"
   },
   "entrypoints": [
-    "static/css/main.a68346f4.css",
-    "static/js/main.43990abb.js"
+    "static/css/main.df448762.css",
+    "static/js/main.1feec352.js"
   ]
 }
