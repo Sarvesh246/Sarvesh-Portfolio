@@ -7,7 +7,6 @@ import AcademicOverview from './components/AcademicOverview';
 import Projects from './components/Projects';
 import Athletics from './components/Athletics';
 import Resume from './components/Resume';
-import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LeadershipAndService from './components/LeadershipAndService';
@@ -46,7 +45,6 @@ function App() {
           <Athletics />
           <LeadershipAndService />
           <Resume />
-          <Gallery />
           <Contact />
         </main>
         

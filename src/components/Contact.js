@@ -46,7 +46,7 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: FiGithub,
-      url: 'https://github.com/sarveshjagtap',
+      url: 'https://github.com/Sarvesh246',
       color: 'hover:bg-gray-800'
     },
     {

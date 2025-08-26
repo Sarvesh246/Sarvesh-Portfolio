@@ -48,7 +48,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm text-navy-200">
                 <li>Varsity Cross Country</li>
                 <li>Varsity Track & Field</li>
-                <li>5K PR: 16:48</li>
+                <li>5K PR: 16:47</li>
               </ul>
             </div>
             <div>
