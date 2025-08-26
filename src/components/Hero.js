@@ -10,6 +10,13 @@ const Hero = () => {
     }
   };
 
+  const scrollToResume = () => {
+    const element = document.querySelector('#resume');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -51,7 +58,6 @@ const Hero = () => {
           className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70"
         />
       </div>
-
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -69,7 +75,6 @@ const Hero = () => {
           >
             Hi, I'm
           </motion.p>
-
           {/* Main Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +84,6 @@ const Hero = () => {
           >
             Sarvesh Jagtap
           </motion.h1>
-
           {/* Subheading */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -89,7 +93,6 @@ const Hero = () => {
           >
             Aspiring Computer Scientist & Student-Athlete
           </motion.p>
-
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -97,10 +100,9 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-lg text-gray-600 dark:text-black mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Passionate about technology, innovation, and making a positive impact through 
+            Passionate about technology, innovation, and making a positive impact through
             computer science and community service.
           </motion.p>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -111,12 +113,13 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={scrollToResume}
               className="bg-navy-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-navy-700 dark:bg-gray-100 dark:text-navy-800 dark:hover:bg-gray-200 transition-colors duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl"
             >
               <FiDownload className="w-5 h-5" />
-              Download Resume
+              View Resume
             </motion.button>
-            
+           
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -132,7 +135,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -153,4 +155,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import profileImage from '../assets/IMG_0113.jpeg';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -85,14 +86,33 @@ const About = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              {/* Placeholder for profile image */}
-              <div className="w-80 h-80 bg-gradient-to-br from-navy-400 to-mint-400 rounded-full flex items-center justify-center shadow-2xl">
-                <div className="text-center text-white">
-                  <div className="text-6xl font-bold mb-2">SJ</div>
-                  <div className="text-lg opacity-90">Profile Photo</div>
-                  <div className="text-sm opacity-75 mt-2">Coming Soon</div>
+              {/* Profile image */}
+                             <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl">
+                 <img 
+                  src={profileImage}
+                  alt="Sarvesh Jagtap" 
+                  className="w-full h-full object-cover"
+                  onLoad={(e) => {
+                    console.log('Profile image loaded successfully');
+                    const fallback = e.target.nextElementSibling || e.target.nextSibling;
+                    if (fallback) fallback.style.display = 'none';
+                    e.target.style.display = 'block';
+                  }}
+                  onError={(e) => {
+                    console.error('Failed to load profile image import:', e.target.src);
+                    e.target.style.display = 'none';
+                    const fallback = e.target.nextElementSibling || e.target.nextSibling;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div className="w-full h-full bg-gradient-to-br from-navy-400 to-mint-400 rounded-full flex items-center justify-center text-white" style={{display: 'none'}}>
+                  <div className="text-center">
+                    <div className="text-6xl font-bold mb-2">SJ</div>
+                    <div className="text-lg opacity-90">Profile Photo</div>
+                    <div className="text-sm opacity-75 mt-2">Image failed to load</div>
+                  </div>
                 </div>
-              </div>
+               </div>
               
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-mint-400 rounded-full opacity-60"></div>

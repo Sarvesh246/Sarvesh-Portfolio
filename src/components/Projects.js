@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiCode, FiZap, FiGlobe, FiUsers, FiAward } from 'react-icons/fi';
+import { FiCode, FiZap, FiGlobe, FiUsers, FiAward, FiCamera, FiImage, FiSmartphone } from 'react-icons/fi';
+import parkpointImage from '../assets/parkpoint.png';
+import inspiritCert from '../assets/inspirit-ai-certificate.jpg';
+import photographyImage from '../assets/photography.png';
+import obscuraImage from '../assets/obscura.png';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -25,7 +29,7 @@ const Projects = () => {
         'Reduces parking congestion and environmental impact'
       ],
       technologies: ['IoT', 'Solar Power', 'HTML/CSS', 'Mobile App', 'Business Model'],
-      image: '/parkpoint-mockup.jpg' // Placeholder
+      image: parkpointImage,
     },
     {
       title: 'Inspirit AI Certificate',
@@ -42,8 +46,41 @@ const Projects = () => {
         'Gained hands-on experience with AI/ML technologies'
       ],
       technologies: ['Machine Learning', 'Python', 'Data Analysis', 'Team Collaboration', 'AI'],
-      image: '/inspirit-ai.jpg' // Placeholder
-    }
+      image: inspiritCert
+    },
+    {
+      title: 'Photo Catalog Website',
+      subtitle: 'Organized Image Storage for Photographers',
+      status: 'In Development',
+      icon: FiCamera,
+      color: 'bg-purple-500',
+      description: 'A web platform designed for photographers to store and organize their photo collections in a way that general cloud storage services don\'t support. This idea came from my own frustration with services like Google Drive and Dropbox being too generic.',
+      details: [
+        'Photo gallery organized by date, location, camera metadata',
+        'Tagging and filtering tools for photographers',
+        'Photographer-first UI with visual focus',
+        'Cloud-based storage with private/public toggles'
+      ],
+      technologies: ['React', 'Firebase', 'Tailwind CSS', 'Cloud Storage', 'Metadata'],
+      image: photographyImage
+    },
+    {
+      title: 'Obscura Studio',
+      subtitle: 'Open-Source Photo Editing App',
+      status: 'In Development',
+      icon: FiImage,
+      color: 'bg-indigo-500',
+      description: 'A free desktop photo editor built as an open-source alternative to Adobe Lightroom. Inspired by how video editors have DaVinci Resolve, but photographers lack a comparable free tool.',
+      details: [
+        'Advanced RAW editing tools and color grading',
+        'No subscriptions, paywalls, or ads',
+        'Full offline support',
+        'Modern interface with custom Tailwind-based themes'
+      ],
+      technologies: ['Electron', 'React', 'Tailwind CSS', 'Photo Editing', 'AI'],
+      image: obscuraImage
+    },
+    
   ];
 
   return (
@@ -154,19 +191,56 @@ const Projects = () => {
                     transition={{ delay: 0.6 + index * 0.2, duration: 0.8 }}
                     className="relative"
                   >
-                    {/* Placeholder for project image */}
-                    <div className="w-full h-80 bg-gradient-to-br from-navy-400 to-mint-400 rounded-lg flex items-center justify-center shadow-xl">
-                      <div className="text-center text-white">
-                        <project.icon className="w-16 h-16 mx-auto mb-4 opacity-80" />
-                        <div className="text-2xl font-bold mb-2">{project.title}</div>
-                        <div className="text-lg opacity-90">Project Preview</div>
-                        <div className="text-sm opacity-75 mt-2">Coming Soon</div>
+                    {/* Show real certificate image for Inspirit AI Certificate, placeholder for others */}
+                    {(project.title === 'ParkPoint') ? (
+                      <div className="relative inline-flex justify-center items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 mx-auto">
+                        <div className="relative w-full max-w-[560px]">
+                          <img
+                            src={project.image}
+                            alt={project.title + ' Preview'}
+                            className="w-full h-auto object-contain"
+                            style={{ background: 'none' }}
+                          />
+                          {/* Corner circles aligned to image container */}
+                          <div className="absolute -top-3 -left-3 w-5 h-5 bg-mint-400 rounded-full opacity-70"></div>
+                          <div className="absolute -top-3 -right-3 w-6 h-6 bg-navy-400 rounded-full opacity-60"></div>
+                          <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-navy-400 rounded-full opacity-60"></div>
+                          <div className="absolute -bottom-3 -right-3 w-5 h-5 bg-mint-400 rounded-full opacity-70"></div>
+                        </div>
                       </div>
-                    </div>
-                    
-                    {/* Decorative elements */}
-                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-mint-400 rounded-full opacity-60"></div>
-                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-navy-400 rounded-full opacity-60"></div>
+                    ) : project.title === 'Inspirit AI Certificate' ? (
+                      <div className="relative inline-flex justify-center items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 mx-auto">
+                        <div className="relative w-full max-w-[560px]">
+                          <img
+                            src={project.image}
+                            alt={project.title + ' Preview'}
+                            className="w-full h-auto object-contain"
+                            style={{ background: 'none' }}
+                          />
+                          {/* Corner circles aligned to image container */}
+                          <div className="absolute -top-3 -left-3 w-5 h-5 bg-mint-400 rounded-full opacity-70"></div>
+                          <div className="absolute -top-3 -right-3 w-6 h-6 bg-navy-400 rounded-full opacity-60"></div>
+                          <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-navy-400 rounded-full opacity-60"></div>
+                          <div className="absolute -bottom-3 -right-3 w-5 h-5 bg-mint-400 rounded-full opacity-70"></div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="relative inline-flex justify-center items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 mx-auto">
+                        <div className="relative w-full max-w-[560px]">
+                          <img
+                            src={project.image}
+                            alt={project.title + ' Preview'}
+                            className="w-full h-auto object-contain"
+                            style={{ background: 'none' }}
+                          />
+                          {/* Corner circles aligned to image container */}
+                          <div className="absolute -top-3 -left-3 w-5 h-5 bg-mint-400 rounded-full opacity-70"></div>
+                          <div className="absolute -top-3 -right-3 w-6 h-6 bg-navy-400 rounded-full opacity-60"></div>
+                          <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-navy-400 rounded-full opacity-60"></div>
+                          <div className="absolute -bottom-3 -right-3 w-5 h-5 bg-mint-400 rounded-full opacity-70"></div>
+                        </div>
+                      </div>
+                    )}
                   </motion.div>
                 </div>
               </motion.div>

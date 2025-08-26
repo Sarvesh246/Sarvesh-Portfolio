@@ -12,10 +12,17 @@ const Athletics = () => {
   const personalRecords = [
     {
       event: '5K',
-      time: '16:48',
+      time: '16:47',
       icon: FiClock,
       color: 'bg-mint-500',
       description: 'Cross Country Personal Record'
+    },
+    {
+      event: '2 Mile',
+      time: '10:27',
+      icon: FiTrendingUp,
+      color: 'bg-primary-500',
+      description: 'Distance Running PR'
     },
     {
       event: '1600m',
@@ -23,13 +30,6 @@ const Athletics = () => {
       icon: FiTarget,
       color: 'bg-navy-500',
       description: 'Track Personal Record'
-    },
-    {
-      event: '3200m',
-      time: '10:36',
-      icon: FiTrendingUp,
-      color: 'bg-primary-500',
-      description: 'Distance Running PR'
     },
     {
       event: '800m',
@@ -41,7 +41,7 @@ const Athletics = () => {
   ];
 
   const achievements = [
-    'Varsity Cross Country Team Member',
+    '2 Year Varsity XC/Track & Field',
     'Varsity Track & Field Team Member',
     'Consistent performance improvement',
     'Strong team leadership and sportsmanship',
@@ -79,7 +79,7 @@ const Athletics = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="grid lg:grid-cols-3 gap-12 mb-16"
+            className="grid lg:grid-cols-3 gap-12 mb-8"
           >
             {/* Cross Country */}
             <div className="bg-white dark:bg-gray-700 p-8 rounded-lg card-shadow hover-lift transition-colors duration-300">
@@ -95,7 +95,7 @@ const Athletics = () => {
               
               <div className="space-y-4">
                 <div className="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg transition-colors duration-300">
-                  <div className="text-3xl font-bold text-mint-600 mb-2">16:48</div>
+                  <div className="text-3xl font-bold text-mint-600 mb-2">16:47</div>
                   <div className="text-gray-700 dark:text-gray-300 font-medium">5K Personal Record</div>
                 </div>
                 
@@ -168,7 +168,7 @@ const Athletics = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
           >
             {personalRecords.map((record, index) => (
               <motion.div
@@ -193,7 +193,7 @@ const Athletics = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 1, duration: 0.8 }}
-            className="bg-gradient-to-r from-navy-50 to-mint-50 dark:from-navy-900/50 dark:to-mint-900/50 p-8 rounded-lg mb-16 transition-colors duration-300"
+            className="bg-gradient-to-r from-navy-50 to-mint-50 dark:from-navy-900/50 dark:to-mint-900/50 p-8 rounded-lg mb-8 transition-colors duration-300"
           >
             <h3 className="text-2xl font-bold text-navy-800 dark:text-white mb-6 text-center">
               Athletic Achievements

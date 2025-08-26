@@ -68,16 +68,30 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Create email content
+      const subject = `Portfolio Contact from ${formData.name}`;
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+      
+      // Create mailto link
+      const mailtoLink = `mailto:sarveshvjagtap@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Open default email client
+      window.open(mailtoLink, '_blank');
+      
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error opening email client:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
       
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus(null), 3000);
-    }, 1500);
+      // Reset status after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+    }
   };
 
   return (
@@ -229,7 +243,7 @@ const Contact = () => {
                       <input
                         type="email"
                         id="email"
-                        name="name"
+                        name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
@@ -284,14 +298,24 @@ const Contact = () => {
                     )}
                   </motion.button>
 
-                  {/* Success Message */}
+                  {/* Success/Error Messages */}
                   {submitStatus === 'success' && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg"
                     >
-                      Thank you! Your message has been sent successfully. I'll get back to you soon.
+                      Perfect! Your default email client should open with a pre-filled message to sarveshvjagtap@gmail.com. Just click send to complete your message.
+                    </motion.div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg"
+                    >
+                      Sorry, there was an error opening your email client. Please contact me directly at sarveshvjagtap@gmail.com
                     </motion.div>
                   )}
                 </form>

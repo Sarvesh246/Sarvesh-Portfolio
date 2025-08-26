@@ -11,6 +11,22 @@ const LeadershipAndService = () => {
 
   const volunteerActivities = [
     {
+      title: 'Neighborhood AI Workshops',
+      subtitle: 'Founder and Instructor',
+      icon: FiCpu,
+      color: 'bg-purple-500',
+      description: 'Led summer workshops for local kids on AI, ethics, and tech. Designed lessons, taught various concepts, and helped inspire interest in STEM fields.',
+      details: [
+        'Founded and organized summer AI workshops for local children',
+        'Designed comprehensive lesson plans covering AI concepts and ethics',
+        'Taught various technical concepts in an accessible way',
+        'Inspired interest in STEM fields among young learners',
+        'Developed teaching and leadership skills through instruction'
+      ],
+      duration: 'Summer',
+      impact: 'STEM Education'
+    },
+    {
       title: 'Key Club',
       subtitle: 'School-based Volunteer',
       icon: FiHeart,
@@ -59,19 +75,37 @@ const LeadershipAndService = () => {
       impact: 'Technical Skills'
     },
     {
-      title: 'Student Leadership',
-      subtitle: 'Club Officer & President',
+      title: 'Student Council',
+      subtitle: 'Student Representative',
       icon: FiUsers,
       color: 'bg-yellow-500',
-      description: 'Active leadership roles in multiple student organizations, focusing on community and student engagement.',
+      description: 'Active member of Student Council, working to improve school environment and student experience.',
       details: [
-        'Served on the Student Council to represent student interests',
-        'Led the Green Team as President, promoting environmental awareness',
-        'Organized events and activities as a Volleyball Club Officer',
-        'Developed skills in leadership, organization, and teamwork'
+        'Working on environmental awareness initiatives and sustainability projects',
+        'Organizing community service events and volunteer opportunities',
+        'Promoting school spirit through events and activities',
+        'Raising drug awareness and promoting healthy choices',
+        'Supporting school clubs through funding and partnerships',
+        'Running school events, organizing spirit weeks and pep rallies'
       ],
       duration: 'Current',
-      impact: 'Leadership'
+      impact: 'Student Leadership'
+    },
+    {
+      title: 'Green Team',
+      subtitle: 'Club President',
+      icon: FiHeart,
+      color: 'bg-green-500',
+      description: 'Leading the Green Team as President, promoting environmental awareness and sustainability.',
+      details: [
+        'Raising environmental awareness throughout the school community',
+        'Taking care of the school campus and maintaining the garden',
+        'Partnering with other clubs to expand environmental reach',
+        'Organizing eco-friendly initiatives and events',
+        'Developing leadership and organizational skills'
+      ],
+      duration: 'Current',
+      impact: 'Environmental Impact'
     }
   ];
 
@@ -103,13 +137,13 @@ const LeadershipAndService = () => {
           {/* Volunteer Activities Grid */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {volunteerActivities.map((activity, index) => (
-              <motion.div
-                key={activity.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.4 + index * 0.2, duration: 0.8 }}
-                className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover-lift transition-colors duration-300"
-              >
+                             <motion.div
+                 key={activity.title}
+                 initial={{ opacity: 0, y: 30 }}
+                 animate={inView ? { opacity: 1, y: 0 } : {}}
+                 transition={{ delay: 0.4 + index * 0.2, duration: 0.8 }}
+                 className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover-lift transition-colors duration-300 flex flex-col"
+               >
                 {/* Activity Header */}
                 <div className="flex items-center gap-4 mb-6">
                   <div className={`w-12 h-12 ${activity.color} rounded-full flex items-center justify-center`}>
@@ -145,17 +179,17 @@ const LeadershipAndService = () => {
                   </ul>
                 </div>
 
-                {/* Activity Info */}
-                <div className="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-600">
-                  <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <FiCalendar className="w-4 h-4" />
-                    <span>{activity.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                    <FiUsers className="w-4 h-4" />
-                    <span>{activity.impact}</span>
-                  </div>
-                </div>
+                                 {/* Activity Info */}
+                 <div className="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-600 mt-auto">
+                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                     <FiCalendar className="w-4 h-4" />
+                     <span>{activity.duration}</span>
+                   </div>
+                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                     <FiUsers className="w-4 h-4" />
+                     <span>{activity.impact}</span>
+                   </div>
+                 </div>
               </motion.div>
             ))}
           </div>
@@ -170,11 +204,11 @@ const LeadershipAndService = () => {
             <h3 className="text-2xl font-bold text-navy-800 dark:text-white mb-6 text-center">
               Community Impact
             </h3>
-            <div className="grid sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-mint-600 mb-2">3</div>
-                <div className="text-gray-700 dark:text-gray-300">Organizations</div>
-              </div>
+                         <div className="grid sm:grid-cols-3 gap-6 text-center">
+               <div>
+                 <div className="text-3xl font-bold text-mint-600 mb-2">6</div>
+                 <div className="text-gray-700 dark:text-gray-300">Organizations</div>
+               </div>
               <div>
                 <div className="text-3xl font-bold text-navy-600 mb-2">100+</div>
                 <div className="text-gray-700 dark:text-gray-300">Hours Served</div>

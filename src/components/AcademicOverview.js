@@ -29,12 +29,17 @@ const AcademicOverview = () => {
     'AP Human Geography',
     'AP Computer Science A',
     'AP World History',
-    'AP English II',
+    'AP English III',
     'AP Calculus BC',
     'AP Psychology',
     'AP U.S. History',
     'AP Biology',
-    'AP Physics I'
+    'AP Physics I',
+    'AP Statistics',
+    'AP Government',
+    'AP English IV',
+    'AP Environmental Science',
+    'AP Economics'
   ];
 
   return (
@@ -111,6 +116,9 @@ const AcademicOverview = () => {
                     <span className="font-bold text-gray-800 dark:text-white">Total Score</span>
                     <span className="text-3xl font-bold text-mint-600">1350</span>
                   </div>
+                  <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 italic">
+                    *August SAT score will be updated here once received
+                  </div>
                 </div>
               </div>
             </div>
@@ -173,7 +181,7 @@ const AcademicOverview = () => {
             </h3>
             <div className="grid sm:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-mint-600 mb-2">9</div>
+                <div className="text-3xl font-bold text-mint-600 mb-2">14</div>
                 <div className="text-gray-700 dark:text-gray-300">AP Courses</div>
               </div>
               <div>
