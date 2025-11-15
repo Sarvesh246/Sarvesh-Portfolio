@@ -91,7 +91,7 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-black mb-8 font-light"
           >
-            Aspiring Computer Scientist & Student-Athlete
+            Aspiring Founder & Student-Athlete
           </motion.p>
           {/* Description */}
           <motion.p
@@ -101,7 +101,7 @@ const Hero = () => {
             className="text-lg text-gray-600 dark:text-black mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Passionate about technology, innovation, and making a positive impact through
-            computer science and community service.
+            computer science, business, and community service.
           </motion.p>
           {/* CTA Buttons */}
           <motion.div
