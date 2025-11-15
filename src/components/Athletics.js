@@ -12,7 +12,7 @@ const Athletics = () => {
   const personalRecords = [
     {
       event: '5K',
-      time: '16:47',
+      time: '16:09',
       icon: FiClock,
       color: 'bg-mint-500',
       description: 'Cross Country Personal Record'
@@ -95,7 +95,7 @@ const Athletics = () => {
               
               <div className="space-y-4">
                 <div className="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg transition-colors duration-300">
-                  <div className="text-3xl font-bold text-mint-600 mb-2">16:47</div>
+                  <div className="text-3xl font-bold text-mint-600 mb-2">16:09</div>
                   <div className="text-gray-700 dark:text-gray-300 font-medium">5K Personal Record</div>
                 </div>
                 

@@ -38,7 +38,7 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-3">Academic</h4>
               <ul className="space-y-2 text-sm text-navy-200">
-                <li>4.27 Weighted GPA</li>
+                <li>4.4 Weighted GPA</li>
                 <li>9 AP Courses</li>
                 <li>1350 SAT Score</li>
               </ul>
@@ -48,7 +48,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm text-navy-200">
                 <li>Varsity Cross Country</li>
                 <li>Varsity Track & Field</li>
-                <li>5K PR: 16:47</li>
+                <li>5K PR: 16:09</li>
               </ul>
             </div>
             <div>

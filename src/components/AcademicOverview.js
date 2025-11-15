@@ -10,15 +10,15 @@ const AcademicOverview = () => {
   });
 
   const academicStats = [
-    { label: 'Weighted GPA', value: '4.27', icon: FiTrendingUp, color: 'bg-mint-500' },
+    { label: 'Weighted GPA', value: '4.4', icon: FiTrendingUp, color: 'bg-mint-500' },
     { label: 'Unweighted GPA', value: '3.39', icon: FiAward, color: 'bg-navy-500' },
     { label: 'Class Rank', value: '144/653', icon: FiBook, color: 'bg-primary-500' },
-    { label: 'SAT Score', value: '1350', icon: FiAward, color: 'bg-mint-600' },
+    { label: 'SAT Score', value: '1390', icon: FiAward, color: 'bg-mint-600' },
   ];
 
   const satBreakdown = [
-    { subject: 'Math', score: '700' },
-    { subject: 'Reading/Writing', score: '650' },
+    { subject: 'Math', score: '690' },
+    { subject: 'Reading/Writing', score: '700' },
   ];
 
   const honorsCourses = [
@@ -114,10 +114,10 @@ const AcademicOverview = () => {
                 <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
                   <div className="flex justify-between items-center">
                     <span className="font-bold text-gray-800 dark:text-white">Total Score</span>
-                    <span className="text-3xl font-bold text-mint-600">1350</span>
+                    <span className="text-3xl font-bold text-mint-600">1390</span>
                   </div>
-                  <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 italic">
-                    *August SAT score will be updated here once received
+                  <div className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+                    Superscore: 1400 (700 Math, 700 Reading/Writing)
                   </div>
                 </div>
               </div>

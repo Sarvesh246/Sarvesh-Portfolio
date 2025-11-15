@@ -19,9 +19,10 @@ const Resume = () => {
 
   const education = {
     school: 'GUYER HIGH SCHOOL – DENTON, TX',
-    gpa: 'Weighted GPA: 4.27 (Honors/AP) | Class Rank: Top 22%',
+    gpa: 'Weighted GPA: 4.4 (Honors/AP) | Class Rank: Top 22%',
     classRank: 'Will complete 13 total AP courses & 10 Honors Classes',
-    sat: 'SAT: 1350; 1380 Superscore (700 Math, 680 Reading/Writing)'
+    sat: 'SAT: 1390 (690 Math, 700 Reading/Writing)',
+    superscore: 'Superscore: 1400 (700 Math, 700 Reading/Writing)'
   };
 
   const skills = [
@@ -105,8 +106,8 @@ const Resume = () => {
                                  {/* Header */}
                  <div className="bg-gradient-to-r from-navy-600 to-navy-800 text-white p-8">
                    <h1 className="text-3xl font-bold mb-2">SARVESH JAGTAP</h1>
-                   <p className="text-xl text-navy-100 mb-4">HIGH SCHOOL SENIOR | ASPIRING SOFTWARE ENGINEER & AI DEVELOPER</p>
-                   <p className="text-navy-100 mb-4">Rising senior with a 4.27 GPA and a 1380 SAT superscore. Founder of a solar-powered parking system and an open-source photo editor. Proficient in React, Tailwind, and Electron with a passion for software engineering and AI.</p>
+                   <p className="text-xl text-navy-100 mb-4">HIGH SCHOOL SENIOR | DEVELOPER & FOUNDER</p>
+                   <p className="text-navy-100 mb-4">Rising senior with a 4.4 GPA and a 1400 SAT superscore. Founder of a solar-powered parking system and an open-source photo editor. Proficient in React, Tailwind, and Electron with a passion for software engineering and AI.</p>
                    <div className="flex flex-wrap gap-4 text-sm">
                      <div className="flex items-center gap-2">
                        <FiMail className="w-4 h-4" />
@@ -139,6 +140,9 @@ const Resume = () => {
                          <p className="text-gray-700 dark:text-gray-300">{education.gpa}</p>
                          <p className="text-gray-700 dark:text-gray-300">{education.classRank}</p>
                          <p className="text-gray-700 dark:text-gray-300">{education.sat}</p>
+                         {education.superscore && (
+                           <p className="text-gray-700 dark:text-gray-300">{education.superscore}</p>
+                         )}
                        </div>
                      </div>
                    </div>
@@ -218,6 +222,8 @@ const Resume = () => {
                          <ul className="space-y-1">
                            <li className="text-gray-700 dark:text-gray-300">• Black Belt in Taekwondo (2022)</li>
                            <li className="text-gray-700 dark:text-gray-300">• 3rd Place – Dictionary UIL Competition (2022)</li>
+                           <li className="text-gray-700 dark:text-gray-300">• Varsity Scholar Athlete Award</li>
+                           <li className="text-gray-700 dark:text-gray-300">• AP Scholar with Honor Award</li>
                          </ul>
                        </div>
                        <div>
