@@ -11,7 +11,7 @@ const AcademicOverview = () => {
 
   const academicStats = [
     { label: 'Weighted GPA', value: '4.4', icon: FiTrendingUp, color: 'bg-mint-500' },
-    { label: 'Unweighted GPA', value: '3.39', icon: FiAward, color: 'bg-navy-500' },
+    { label: 'Unweighted GPA', value: '3.5', icon: FiAward, color: 'bg-navy-500' },
     { label: 'Class Rank', value: '144/653', icon: FiBook, color: 'bg-primary-500' },
     { label: 'SAT Score', value: '1390', icon: FiAward, color: 'bg-mint-600' },
   ];
@@ -87,6 +87,11 @@ const AcademicOverview = () => {
                 </div>
                 <div className="text-3xl font-bold text-navy-800 dark:text-white mb-2">{stat.value}</div>
                 <div className="text-gray-600 dark:text-gray-300 font-medium">{stat.label}</div>
+                {stat.label === 'Class Rank' && (
+                  <div className="mt-2 text-xs text-gray-600 dark:text-gray-400 italic">
+                    * Class rank shown is from junior year; senior-year rank will update with new GPA
+                  </div>
+                )}
               </motion.div>
             ))}
           </motion.div>
